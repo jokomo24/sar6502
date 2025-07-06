@@ -1,0 +1,4 @@
+---
+alwaysApply: true
+---
+Review this AMD fpga Xilinx design guide before making signifigant changes to the codebase at https://docs.amd.com/r/en-US/ug949-vivado-design-methodology/Introduction

@@ -1,0 +1,73 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Build ROM",
+      "type": "shell",
+      "command": "bash",
+      "args": [
+        "-c",
+        "cd /Users/jokomo/Storage/Dev/Vivado/sar6502/programs && ./build_rom_65c02.sh basys3_test"
+      ],
+      "problemMatcher": [],
+      "group": {
+        "kind": "build",
+        "isDefault": false
+      }
+    },
+    {
+      "label": "Build Bitstream",
+      "type": "shell",
+      "command": "ssh",
+      "args": [
+        "win11",
+        "cd C:\\Mac\\Home\\Storage\\Dev\\Vivado\\sar6502 && vivado -mode batch -source build.tcl -tclargs sar6502.xpr"
+      ],
+      "problemMatcher": [],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "dependsOn": "Build ROM"
+    },
+    {
+      "label": "Flash Bitstream",
+      "type": "shell",
+      "command": "ssh",
+      "args": [
+        "win11",
+        "cd C:\\Mac\\Home\\Storage\\Dev\\Vivado\\sar6502 && vivado -mode batch -source flash.tcl -tclargs sar6502.xpr"
+      ],
+      "problemMatcher": [],
+      "group": {
+        "kind": "test",
+        "isDefault": false
+      }
+    },
+    {
+      "label": "Run Simulation",
+      "type": "shell",
+      "command": "ssh",
+      "args": [
+        "win11",
+        "cd C:\\Mac\\Home\\Storage\\Dev\\Vivado\\sar6502 && vivado sar6502 -mode batch -source .\\run_sim.tcl"
+      ],
+      "problemMatcher": [],
+      "group": {
+        "kind": "test",
+        "isDefault": false
+      }
+    },
+    {
+      "label": "Clean Project",
+      "type": "shell",
+      "command": "rm -rf .gen/ .srcs/ .Xil/ sar6502.srcs/sources_1/new/.srcs; find . -type f \\( -name '*.bin' -o -name '*.mem' -o -name '*.o' -o -name '*.coe' -o -name '*.jou' -o -name '*.log' -o -name '*.backup.jou' -o -name '*.backup.log' \\) -delete; find ./programs -type f \\( -name '*.bin' -o -name '*.mem' \\) -delete;",
+      "problemMatcher": [],
+      "group": {
+        "kind": "build",
+        "isDefault": false
+      }
+    }
+  ]
+}
+

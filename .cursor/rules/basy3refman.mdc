@@ -1,0 +1,4 @@
+---
+alwaysApply: true
+---
+Understand that the sar6502 project is targeting the Basys 3 fpga and always review the reference manual here https://digilent.com/reference/programmable-logic/basys-3/reference-manual

@@ -1,0 +1,4 @@
+---
+alwaysApply: true
+---
+Always review design constraints when creating .xdc files here at https://docs.amd.com/r/en-US/ug949-vivado-design-methodology/Design-Constraints

@@ -1,0 +1,4 @@
+---
+alwaysApply: false
+---
+Understand that loading a program on to the cpu is not the same in synthesis as it is with simulation. Review this document https://web.mit.edu/6.111/volume2/www/f2019/handouts/labs/lab3_19/rom_vivado.html?utm_source=chatgpt.com and search the internet to ensure correct guidance on how to successfully load a program on a physical implementation of the cpu on the basys3.
