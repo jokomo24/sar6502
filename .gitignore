@@ -20,8 +20,6 @@
 *.pb
 *.dmp
 *.tcl.history
-.gen/
-.srcs/
 
 # Vivado project-specific files
 *.xpr

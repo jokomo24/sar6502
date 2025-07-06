@@ -61,7 +61,7 @@
     {
       "label": "Clean Project",
       "type": "shell",
-      "command": "rm -rf .gen/ .srcs/ .Xil/ sar6502.srcs/sources_1/new/.srcs; find . -type f \\( -name '*.bin' -o -name '*.mem' -o -name '*.o' -o -name '*.coe' -o -name '*.jou' -o -name '*.log' -o -name '*.backup.jou' -o -name '*.backup.log' \\) -delete; find ./programs -type f \\( -name '*.bin' -o -name '*.mem' \\) -delete;",
+      "command": "rm -rf .Xil/ sar6502.srcs/sources_1/new/.srcs sar6502.gen/sources_1; find . -type f \\( -name '*.bin' -o -name '*.mem' -o -name '*.o' -o -name '*.coe' -o -name '*.jou' -o -name '*.log' -o -name '*.backup.jou' -o -name '*.backup.log' \\) -delete; find ./programs -type f \\( -name '*.bin' -o -name '*.mem' \\) -delete;",
       "problemMatcher": [],
       "group": {
         "kind": "build",
